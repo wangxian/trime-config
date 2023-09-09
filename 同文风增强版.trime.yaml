@@ -128,8 +128,8 @@ style:
     movable: false #是否可移动窗口，或仅移动一次 true|false|once
     all_phrases: false #显示所有长词
   window: #悬浮窗口組件
-    - {start: "", composition: "%s", end: "", letter_spacing: 0.1} #letter_spacing需要Android5.0。TODO: 不为0时，会导致不换行的问题
-    - {start: "\n", label: "%s.", candidate: "%s", comment: " %s", end: "", sep: "  "}  #label: "%s.", 序号;start: "\n", 换行
+    - {start: "", composition: "%s", end: "", letter_spacing: 0.1} # letter_spacing需要Android5.0。TODO: 不为0时，会导致不换行的问题
+    - {start: "\n", label: "%s.", candidate: "%s", comment: " %s", end: "", sep: "  "}  # label: "%s.", 序号;start: "\n", 换行
   key_font: symbol.ttf #键盘字体
   key_height: *FJG #键高
   key_long_text_size: 15 #长标签字号
