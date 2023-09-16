@@ -61,6 +61,9 @@ translator:
   enable_user_dict: true                # 是否开启用户词典（用户词典记录动态字词频，用户词）
   enable_encoder: true                  # 启用编码器，即允许造词——允许新词进入用户词典
 
+  encode_commit_history: true           # 是否对已上屏的词自动造词（不要开启，有误伤）
+  max_phrase_length: 10                 # 自动生成词的最大长度
+
   preedit_format:                       # 上屏码自定义
     # - xform/.+//
   comment_format:                       # 提示码自定义
