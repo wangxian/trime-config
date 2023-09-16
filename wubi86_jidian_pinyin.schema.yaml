@@ -63,7 +63,7 @@ translator:
   enable_encoder: true                  # 自动造词
 
   encode_commit_history: true           # 是否对已上屏的词自动造词（不要开启，有误伤）
-  max_phrase_length: 10                 # 自动生成词的最大长度
+  max_phrase_length: 4                  # 自动生成词的最大长度
 
   user_dict: user                       # 用户词典名
   db_class: tabledb                     # 用户词典类型 userdb - 二进制 / tabledb - 人类语言
