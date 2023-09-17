@@ -89,7 +89,7 @@ style:
   symbol_font: symbol.ttf #符号字体
   symbol_text_size: 10 #符号字号
   text_font: latin.ttf #编码字体
-  #text_height: 32 #编码区高度
+  # text_height: 32 #编码区高度
   text_size: 14 #编码区字号
   vertical_correction: -5
   vertical_gap: *sgap #键盘行距
@@ -173,7 +173,9 @@ preset_color_schemes:
     text_back_color: *color2 #编码区背景
     bkg: *color2 #空格键背景色
     tkg: *color1 #空格键文字颜色
-    benter: *color6 #回车键背景色
+    # benter: *color6 #回车键背景色
+    # tenter: *color2 #回车键文字颜色
+    benter: *color4 #回车键背景色
     tenter: *color2 #回车键文字颜色
     bgn: *color4 #功能键背景色
     tgn: *color2 #功能键文字颜色

@@ -12,5 +12,8 @@ push_all:
 push_wubi:
 	adb push wubi86* $(CONFDIR)
 
+push_theme:
+	adb push *.trime.yaml $(CONFDIR)
+
 shell:
 	adb shell
