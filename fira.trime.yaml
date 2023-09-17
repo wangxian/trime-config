@@ -27,7 +27,7 @@ style:
   background_dim_amount: 0.5
   root_background: keyboard_back_color # 整個鍵盤區+候選欄的背景圖/色
   candidate_font: hanb.ttf  # 候選字體
-  candidate_padding: 10  # 候選項內邊距
+  candidate_padding: 4  # 候選項內邊距
   candidate_spacing: 0  # 候選間距
   candidate_text_size: 20  # 候選字號
   candidate_use_cursor: true # 高亮候選項
@@ -36,10 +36,10 @@ style:
   comment_font: comment.ttf # 編碼提示字體
   comment_height: 25 # 編碼提示區高度
   comment_on_top: false # 編碼提示在上方或右側
-  comment_text_size: 7 # 編碼提示字號
+  comment_text_size: 11 # 編碼提示字號
   hanb_font: hanb.ttf # 擴充字體
   horizontal: false # 水平模式
-  horizontal_gap: *hgap # 鍵水平間距
+  horizontal_gap: * # 鍵水平間距
   layout:
     position: fixed # 候選窗口位置： left|right|left_up|right_up|fixed|bottom_left|bottom_right|top_left|top_right(left 、 right 需要 Android5.0 以上)
     min_length: 4 # 候選窗口最小詞長
@@ -66,7 +66,7 @@ style:
     movable: false # 是否可移動窗口，或僅移動一次 true|false|once
     all_phrases: false # 顯示所有長詞
   window: # 懸浮窗口組件
-   # - {start: "", move: 'ㄓ ', end: ""}
+    # - {start: "", move: 'ㄓ ', end: ""}
     - {start: "", composition: "%s", end: "", letter_spacing: 0.12} # letter_spacing 需要 Android5.0
     - {start: "\n", label: "%s.", candidate: "%s", comment: "%s", end: "", sep: "☁️️"}
   # key_font: FiraCode_+_SarasaMono_Semibold.ttf # 鍵盤字體
@@ -674,7 +674,7 @@ preset_keys:
   Left: {label: '←', send: Left, repeatable: true, functional: false}
   Down: {label: '↓', send: Down, functional: false}
   Up: {label: '↑', send: Up, functional: false}
-  Right: {label: '→', send: Right, repeatable: true, functional: false}
+  Right: {label: ' ', send: Right, repeatable: true, functional: false}
   select_all: {label: 全选, functional: false, send: Control+a}
   cut: {label: 剪切, functional: false, send: Control+x}
   copy: {label: 复制, functional: false, send: Control+c}
