@@ -20,7 +20,7 @@ round_corner:
   1: &round1 20 # 按鍵圓角半徑
   2: &round2 15 # 候選窗口圓角
   3: &round3 15 # 回車鍵圓角
-  
+
 # 界面風格、功能開關
 style:
   auto_caps: false # 自動句首大寫:true|false|ascii
@@ -69,20 +69,20 @@ style:
 #    - {start: "", move: 'ㄓ ', end: ""}
     - {start: "", composition: "%s", end: "", letter_spacing: 0.12} # letter_spacing 需要 Android5.0
     - {start: "\n", label: "%s.", candidate: "%s", comment: "%s", end: "", sep: "☁️️"}
-  key_font: FiraCode_+_SarasaMono_Semibold.ttf # 鍵盤字體
+  # key_font: FiraCode_+_SarasaMono_Semibold.ttf # 鍵盤字體
   key_height: *jpgd4 # 鍵高
   key_long_text_size: 16 # 長標籤字號
   key_text_size: 24 # 鍵字號
   key_width: 10.0 # 鍵寬，佔屏幕寬的百分比
   keyboards: [.default, default, numberandsymbol, number, bqfh1, bqfh2] # 鍵盤配置
   label_text_size: 22 # 標籤字號
-  label_font: FiraCode_+_SarasaMono_Semibold.ttf # 編標籤字體
-  latin_font: FiraCode_+_SarasaMono_Semibold.ttf # 西文本體
+  # label_font: FiraCode_+_SarasaMono_Semibold.ttf # 編標籤字體
+  # latin_font: FiraCode_+_SarasaMono_Semibold.ttf # 西文本體
   latin_locale: en_US # 西文語言
   locale: zh_CN # 缺省語言 zh_TW,zh_CN,zh_HK,""
   keyboard_height: 260 # 鎖定鍵盤高度，避免切換時鍵盤高度變化而造成閃爍
   keyboard_height_land: 250 # 鎖定橫屏下鍵盤高度，避免切換時鍵盤高度變化而造成閃爍
-  preview_font: FiraCode_+_SarasaMono_Semibold.ttf # 按鍵提示字體
+  # preview_font: FiraCode_+_SarasaMono_Semibold.ttf # 按鍵提示字體
   preview_height: 56 # 按鍵提示高度
   preview_offset: -32 # 按鍵提示縱向偏移
   preview_text_size: 40 # 按鍵提示字號
@@ -91,9 +91,9 @@ style:
   round_corner: *round1 # 按鍵圓角半徑
   shadow_radius: 0.0 # 按鍵陰影半徑
   speech_opencc_config: none # 語音輸入簡繁轉換
-  symbol_font: FiraCode_+_SarasaMono_Semibold.ttf # 符號字體
+  # symbol_font: FiraCode_+_SarasaMono_Semibold.ttf # 符號字體
   symbol_text_size: 10 # 符號字號
-  text_font: FiraCode_+_SarasaMono_Semibold.ttf # 編碼字體
+  # text_font: FiraCode_+_SarasaMono_Semibold.ttf # 編碼字體
   # text_height: 32 # 編碼區高度
   text_size: 16 # 編碼區字號
   vertical_correction: -5
@@ -145,7 +145,7 @@ fallback_colors:
   long_text_back_color: key_back_color # 長文本按鍵的背景 (剪貼板）
 
 #--------配色開始----------------#
-  
+
 # Fira Dark 配色方案
 preset_color_schemes:
   fira_dark:
@@ -154,8 +154,8 @@ preset_color_schemes:
     2: &Fira_dark_color2 0xff393c3f # 主要按鍵背景色
     3: &Fira_dark_color3 0xff000000 # 主要背景色
     4: &Fira_dark_color4 0xff676767 # 功能鍵背景色
-    6: &Fira_dark_color5 0xff28d66a # 強調背景色 
-    7: &Fira_dark_color6 0xff000000 # 強調文本色 
+    6: &Fira_dark_color5 0xff28d66a # 強調背景色
+    7: &Fira_dark_color6 0xff000000 # 強調文本色
     8: &Fira_dark_color7 0xffB6B6B6 # 次要文本色
     # ----------------------------------------
     name: "Fira Dark"  # 方案名稱
@@ -213,8 +213,8 @@ preset_color_schemes:
     2: &Fira_light_color2 0xffffffff # 主要按鍵背景色
     3: &Fira_light_color3 0xffe7e9eb # 主要背景色
     4: &Fira_light_color4 0xffcacdd3 # 功能鍵背景色
-    6: &Fira_light_color5 0xff2472e1 # 強調背景色 
-    7: &Fira_light_color6 0xffffffff # 強調文本色 
+    6: &Fira_light_color5 0xff2472e1 # 強調背景色
+    7: &Fira_light_color6 0xffffffff # 強調文本色
     8: &Fira_light_color7 0xff5d5e5f # 次要文本色
     # ----------------------------------------
     name: "Fira Light"  # 方案名稱
@@ -337,7 +337,7 @@ preset_keyboards:
       - {click: Right, long_click: End , composing: Page_Down, key_back_color: bh2, key_text_color: th2}
       - {click: '.', label: '。', long_click: liquid_keyboard_clipboard, key_back_color: bh4, key_text_color: th4}
       - {click: Return, composing: Return1, width: 15, key_back_color: benter, key_text_color: tenter, key_text_offset_y: 0}
-      
+
       - {height: 3, width: 100}
 
   numberandsymbol:
@@ -357,7 +357,7 @@ preset_keyboards:
       - {click: '{7+}', long_click: '&', key_back_color: bh1, key_text_color: th1}
       - {click: '{8+}', long_click: '*', key_back_color: bh1, key_text_color: th1}
       - {click: '{9+}', key_back_color: bh1, key_text_color: th1}
-      - {click: '{0+}', key_back_color: bh1, key_text_color: th1} 
+      - {click: '{0+}', key_back_color: bh1, key_text_color: th1}
 
       - {click: '{Graveaccent}', key_back_color: bh2, key_text_color: th2, key_text_size: 18}
       - {click: '{Tilde}', key_back_color: bh2, key_text_color: th2, key_text_size: 18}
@@ -389,7 +389,7 @@ preset_keyboards:
       - {click: Return, composing: Return1, width: 15, key_back_color: benter, key_text_color: tenter, key_text_offset_y: 0}
 
       - {height: 3, width: 100}
-  
+
   number:
     author: "ChiesiMario"
     name: 數字
@@ -397,7 +397,7 @@ preset_keyboards:
    # height: 48
     ascii_mode: 1
     keys:
-    
+
       - {click: 1}
       - {click: 2}
       - {click: 3}
@@ -606,31 +606,31 @@ preset_keys:
   # 數字
   1: {label: '1', commit: '1'}
   1+: {label: '1', commit: '1', shift_lock: '{1}'}
-  
+
   2: {label: '2', commit: '2'}
   2+: {label: '2', commit: '2', shift_lock: '{2}'}
 
   3: {label: '3', commit: '3'}
   3+: {label: '3', commit: '3', shift_lock: '{3}'}
-  
+
   4: {label: '4', commit: '4'}
   4+: {label: '4', commit: '4', shift_lock: '{4}'}
-  
+
   5: {label: '5', commit: '5'}
   5+: {label: '5', commit: '5', shift_lock: '{5}'}
-  
+
   6: {label: '6', commit: '6'}
   6+: {label: '6', commit: '6', shift_lock: '{6}'}
-  
+
   7: {label: '7', commit: '7'}
   7+: {label: '7', commit: '7', shift_lock: '{7}'}
-  
+
   8: {label: '8', commit: '8'}
   8+: {label: '8', commit: '8', shift_lock: '{8}'}
-  
+
   9: {label: '9', commit: '9'}
   9+: {label: '9', commit: '9', shift_lock: '{9}'}
-  
+
   0: {label: '0', commit: '0'}
   0+: {label: '0', commit: '0', shift_lock: '{0}'}
 
@@ -739,7 +739,7 @@ preset_keys:
   Zdic: {label: 漢典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%1$s"} # 搜索網頁: %s 或者%1$s 為當前字符
   Zdic2: {label: 漢典, send: function, command: run, option: "http://www.zdic.net/sousuo/?q=%2$s"} # 搜索網頁: %2$s 為當前輸入的編碼
   WebSearch: {label: 搜索網頁, send: function, command: web_search, option: "%4$s"} # 搜索，其他 view 、 dial 、 edit 、 search 等 intent ，參考安卓的 intent 文檔： https://developer.android.com/reference/android/content/Intent.html
-  
+
   Left1: {label: '⇦', send: Control+Left, repeatable: true, functional: false}
   Right1: {label: '⇨', send: Control+Right, repeatable: true, functional: false}
   Shift_L2: {label: 選擇, preview: '⇪', functional: false, send: Shift_L}
@@ -771,7 +771,7 @@ preset_keys:
   Keyboard_h: {label: "丿", send: I}
   Keyboard_r: {label: "丶", send: O}
   Keyboard_e0: {label: "ㄥ", send: E}
-  
+
   Keyboard_a3: {label: "……", functional: false, send: asciicircum}
 
    # 表情鍵自定義
