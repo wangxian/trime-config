@@ -106,7 +106,7 @@ style:
     pre:  上个
     search: 搜索
     send: 发送
-    default: 确定   # 定義默認 Enter 鍵的文本
+    default: 确定
 
 fallback_colors:
   candidate_text_color: text_color

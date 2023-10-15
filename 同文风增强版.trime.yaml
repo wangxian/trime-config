@@ -33,6 +33,7 @@ keyboard_height:
   N: &CQ_text_size 20
   H: &VJG_Other 58
   I: &NUM_SYM_W 15.5   # 数字  符号键盘  宽度
+
 #-------调节尽量以配色中键高最低的配色为标准------
 other:
 #主键盘结构（四行）
@@ -82,7 +83,7 @@ colors:
   27: &COLOR_XPERIA_CANDIDATE_GREEN 0xff00a886 #SONY绿
 
 
-#界面风格、功能开关
+# 界面风格、功能开关
 style:
   auto_caps: false #自動句首大寫:true|false|ascii
   background_dim_amount: 0.5
@@ -156,7 +157,18 @@ style:
   #text_height: 32 #编码区高度
   text_size: 14 #编码区字号
   vertical_correction: -5
-  vertical_gap: *NJL #键盘行距
+  vertical_gap: *NJL # 键盘行距
+  key_long_text_border: 1
+  # 不起作用 - 废弃
+  # enter_label_mode: 0  #是否使用App提供的ActionLabel内容作为Enter键的文本（由于多数App没有适配ActionLable，实际影响不大）。0不使用，1只使用actionlabel，2优先使用，3当其他方式没有获得label时才读取actionlabel
+  # enter_labels:  # 定义Enter键的文本
+  #   go: 前往
+  #   done: 完成
+  #   next: 下个
+  #   pre:  上个
+  #   search: 搜索
+  #   send: 发送
+  #   default: 确定   # 定义默认Enter键的文本
 
 
 
@@ -620,6 +632,7 @@ preset_color_schemes:
     xdb: 0xffe9e9e9 #❖选单界面背景色
 
   guge:
+    name: "谷歌"
     AAA: GGkey.png
     AAH: GGkeyh.png
     ABC: GGgnb.png
@@ -649,12 +662,12 @@ preset_color_schemes:
     gnh: GGgnh.png
     gns: 0xff5b696f
     hbdt: 0xff37474f
-    hcb: GGhcb.png
+    hcb: GGgnb.png # 回车背景
     hch: GGhch.png
-    hchs: *COLOR_WHITE
-    hcht: *COLOR_WHITE
-    hcs: *COLOR_WHITE
-    hct: *COLOR_WHITE
+    hchs: *COLOR_BLACK
+    hcht: *COLOR_BLACK
+    hcs: *COLOR_BLACK
+    hct: *COLOR_BLACK
     hilited_back_color: *COLOR_TRANSPARENT
     hilited_candidate_back_color: *COLOR_TRANSPARENT
     hilited_candidate_text_color: 0xff73cacc
@@ -677,7 +690,6 @@ preset_color_schemes:
     kgs: 0xff5f6b73
     kgt: 0xff4d4d4d
     label_color: 0xff999999
-    name: "谷歌"
     off_key_back_color: 0xffe1e1e1
     off_key_text_color: 0xff4d4d4d
     on_key_back_color: 0xffe1e1e1
