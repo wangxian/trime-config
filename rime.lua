@@ -1,3 +1,19 @@
+--- 过滤器：单字在先
+function single_char_first_filter(input)
+    local l = {}
+    for cand in input:iter() do
+        if (utf8.len(cand.text) == 1) then
+            yield(cand)
+        else
+            table.insert(l, cand)
+        end
+    end
+
+    for i, cand in ipairs(l) do
+        yield(cand)
+    end
+end
+
 function date_translator(input, seg)
     -- 输入完整日期
     if (input == "datetime") then
@@ -33,20 +49,10 @@ function date_translator(input, seg)
         yield(Candidate("week", seg.start, seg._end, os.date("%a"), "缩写"))
         yield(Candidate("week", seg.start, seg._end, os.date("%W"), "周数"))
     end
-end
 
---- 过滤器：单字在先
-function single_char_first_filter(input)
-    local l = {}
-    for cand in input:iter() do
-        if (utf8.len(cand.text) == 1) then
-            yield(cand)
-        else
-            table.insert(l, cand)
-        end
-    end
-
-    for i, cand in ipairs(l) do
-        yield(cand)
+    -- 输入月份英文
+    if (input == "month") then
+        yield(Candidate("month", seg.start, seg._end, os.date("%B"), ""))
+        yield(Candidate("month", seg.start, seg._end, os.date("%b"), "缩写"))
     end
 end
