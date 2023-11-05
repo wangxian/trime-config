@@ -15,5 +15,11 @@ push_wubi:
 push_theme:
 	adb push *.trime.yaml $(CONFDIR)
 
+push_yaml:
+	adb push *.yaml $(CONFDIR)
+
+push_schema:
+	adb push *.schema.yaml $(CONFDIR)
+
 shell:
 	adb shell
