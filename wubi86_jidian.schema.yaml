@@ -72,6 +72,11 @@ translator:
   comment_format:                       # 提示码自定义
     # - xform/.+//                      # 配置：消除所有候选词后的提示码
 
+# 输入的编码同时进行拼音反查，配合 z键实现五笔的反查
+abc_segmentor:
+  extra_tags:
+    - reverse_lookup
+
 reverse_lookup:
   dictionary: clover       # 反查使用的拼音词库
   prefix: "z"              # 反查前缀，以它为起点
