@@ -14,6 +14,34 @@ function single_char_first_filter(input)
     end
 end
 
+--- 过滤器：只显示单字
+function single_char_only(input)
+    for cand in input:iter() do
+        if (utf8.len(cand.text) == 1) then
+            yield(cand)
+        end
+    end
+end
+
+--- 计算器
+--- @KyleBing 2022-01-17
+function calculator(input, seg)
+    if string.find(input, 'coco') ~= nil then -- 匹配 coco 开头的字符串
+        local _, _, a, operation, b = string.find(input, "coco(%d+%.?%d*)([%+%-%*/])(%d+%.?%d*)")
+        local result = 0
+        if operation == '+' then
+            result = a + b
+        elseif operation == '-' then
+            result = a - b
+        elseif operation == '*' then
+            result = a * b
+        elseif operation == '/' then
+            result = a / b
+        end
+        yield(Candidate("coco", seg.start, seg._end, result, "计算器"))
+    end
+end
+
 function date_translator(input, seg)
     -- 输入完整日期
     if (input == "datetime") then
