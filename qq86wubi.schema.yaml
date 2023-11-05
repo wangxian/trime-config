@@ -11,7 +11,7 @@ schema:
   description: |
     五笔字形 86 QQ 86五笔版，方案由 SivanLaai 修改 - 2021年02月07日 17:55
   dependencies:
-#    - clover
+    # - clover
 
 switches:
   - name: ascii_mode
@@ -58,9 +58,9 @@ translator:
   enable_user_dict: false               # 是否开启用户词典（用户词典记录动态字词频，用户词）
   enable_encoder: false
   preedit_format:                       # 上屏码自定义
-#    - xform/.+//
+    # - xform/.+//
   comment_format:                       # 提示码自定义
-#    - xform/.+//                        # 配置：消除所有候选词后的提示码
+    # - xform/.+//                        # 配置：消除所有候选词后的提示码
 
 
 reverse_lookup:
